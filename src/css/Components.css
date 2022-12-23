@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    width: 100vw;
+    height: 16vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: var(--Primary);
+    /* background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px); */
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar .logo img {
+    width: 80px;
+    margin: 0.2rem;
+
+}
+
+.navbar .logo p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.navbar .logo p span {
+    color: var(--Tertiary);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.navbar .list {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.navbar .list a {
+    text-decoration: none;
+    color: var(--Primary);
+    transition: 0.2s all ease-in-out;
+    font-size: 1.1rem;
+}
+
+.navbar .list a:hover {
+    color: var(--Tertiary);
+}
+
