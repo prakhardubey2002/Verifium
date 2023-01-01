@@ -1,24 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-*{
+
+* {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-:root{
-  --Background--color:#1b1b1b;
-  --Primary:#aba9a9;
-  --Secondary:#f9f9f9;
-  --Tertiary:#b02970;
+
+:root {
+  --Background--color: #1b1b1b;
+  --Primary: #aba9a9;
+  --Secondary: #f9f9f9;
+  --Tertiary: #b02970;
 }
-.app{
+
+.app {
   min-height: 100vh;
   width: 100vw;
   background-color: var(--Background--color);
+  background: #ee9ca7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ee9ca7, #ffdde1);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
 }
-.home{
+
+.home {
   width: 100vw;
   min-height: 80vh;
   padding: 1rem;
@@ -26,32 +38,50 @@ html{
   justify-content: space-between;
   align-items: center;
 }
-.home .left .heading{
+
+.home .left .heading {
   color: var(--Secondary);
   font-weight: 400;
 }
-.home .left{
+
+.home .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-left: 2rem;
 }
-.home .left .heading h2{
+.home > *{
+  padding: 0.2rem 2rem;
+}
+.home .left .heading h2 {
   font-weight: 400;
   font-size: 2.4rem;
   margin-bottom: 0.1rem;
-  padding: 0.2rem 1rem;
+  /* padding: 0.2rem 1rem; */
 }
-.home .left .heading h3{
+
+.home .left .heading h3 {
   font-weight: 400;
   font-size: 2.0rem;
   margin-bottom: 0.1rem;
-  padding: 0.2rem 1rem;
+  /* padding: 0.2rem 1rem; */
 }
-.home .left .heading h4{
+
+.home .left .heading h4 {
   font-weight: 400;
   font-size: 1.8rem;
   margin-bottom: 0.1rem;
-  padding: 0.2rem 1rem;
+  /* padding: 0.2rem 1rem; */
+}
+.home .right .card{
+  width: 40vw;
+  height: 60vh;
+  overflow: hidden;
+  /* padding: 1rem; */
+  /* border: 10px solid black; */
+}
+.home .right .card .art{
+  width: 100%;
+  height: 100%;
 }

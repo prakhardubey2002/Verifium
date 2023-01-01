@@ -39,6 +39,7 @@ html {
 .navbar .logo p {
     font-weight: 500;
     font-size: 1.2rem;
+    color: #fff;
 }
 
 .navbar .logo p span {
@@ -57,7 +58,7 @@ html {
 
 .navbar .list a {
     text-decoration: none;
-    color: var(--Primary);
+    color: #fff;
     transition: 0.2s all ease-in-out;
     font-size: 1.1rem;
 }

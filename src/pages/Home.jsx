@@ -1,29 +1,32 @@
 import React from 'react'
-
+import blockchain from "../assets/Blockchain.json"
+import Lottie from "lottie-react"
+import Button from '../components/Button'
 const Home = () => {
   return (
     <div className="home">
       <div className="left">
         <div className="heading">
-          <h2>Fast and Effcient Degree,certificate and badges </h2>
-          <h3>On your Figertip in couple of seconds</h3>
+          <h2>Fast and Effcient way to generate Degree,certificate and badges </h2>
+          {/* <h3>On your Figertip in couple of seconds</h3><br /> */}
           <h4>With security of blockchain</h4>
         </div>
         <div className="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br />
-            Lorem ipsum dolor sit.
-          </p>
+          <br />
+         <p>
+         Our project offers educational organizations to have their own Digital credentials offering page to give tamper proof badges, certificates, a degree in NFT format with a verification system to verify credentials
+         </p>
+         <br />
         </div>
-        <button>
+        {/* <button>
           Register
-        </button>
+        </button> */}<br/>
+        <Button word={"Connect"}/>
       </div>
       <div className="right">
         <div className="card">
-          <p>sa</p>
+          
+          <Lottie className='art' animationData={blockchain} loop={true}/>
         </div>
       </div>
     </div>
