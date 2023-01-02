@@ -43,8 +43,8 @@ html {
 }
 
 .navbar .logo p span {
-    color: var(--Tertiary);
-    font-size: 1.6rem;
+    color: black;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
