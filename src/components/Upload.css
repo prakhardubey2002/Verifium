@@ -1,0 +1,29 @@
+.UploadPage{
+    /* padding: 2rem; */
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+.UploadPage>form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.UploadPage>form input{
+    width: 40vw;
+    padding: .75rem 1rem;
+    background: #0000;
+    margin-bottom: 1rem;
+    border: 3px solid white;
+
+}
+
+.UploadPage>p{
+    font-size: 1.5rem;
+}
+.UploadPage>div{
+    font-size: 1.25rem;
+    text-align: center;
+}
