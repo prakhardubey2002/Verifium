@@ -7,6 +7,7 @@ import About from './pages/About';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Upload from './components/Upload';
+import Details from './pages/Details';
 function App() {
   return (
     <div className="app">
@@ -19,6 +20,7 @@ function App() {
           <Route path='/Register' element={<Register />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/upload' element={<Upload/>} />
+          <Route path='/Details' element={<Details/>}/>
         </Routes>
         <Footer />
 
