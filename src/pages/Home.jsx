@@ -2,7 +2,12 @@ import React from 'react'
 import blockchain from "../assets/Blockchain.json"
 import Lottie from "lottie-react"
 import Button from '../components/Button'
+import { toast } from 'react-toastify'
+import { Navigate } from 'react-router-dom'
 const Home = () => {
+  const notification = ()=>{
+    toast("Connect wallet beforehand to explore")
+  }
   return (
     <div className="home">
       <div className="left">
@@ -17,11 +22,13 @@ const Home = () => {
          Our project offers educational organizations to have their own Digital credentials offering page to give tamper proof badges, certificates, a degree in NFT format with a verification system to verify credentials
          </p>
          <br />
-        </div>
+        </div >
         {/* <button>
           Register
         </button> */}<br/>
-        <Button word={"Connect"}/>
+        <div onClick={notification} >
+        <Button  word={"Explore"}/>
+        </div>
       </div>
       <div className="right">
         <div className="card">

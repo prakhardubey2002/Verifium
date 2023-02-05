@@ -8,11 +8,16 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Upload from './components/Upload';
 import Details from './pages/Details';
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-
+      <ToastContainer
+                // position="top-center"
+                // autoClose={5000}
+                // pauseOnHover
+            />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
