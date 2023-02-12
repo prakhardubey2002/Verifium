@@ -112,17 +112,18 @@ html {
   width: 100%;
   height: 100%;
 }
-.login{
+/* .login{
   height: 70vh;
   width: 100vw;
   position: relative;
-}
+} */
 
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 90%;
+  min-height: 80vh;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(24, 20, 20, 0.987);
@@ -158,9 +159,34 @@ html {
   pointer-events: none;
   transition: .5s;
 }
+.login-box .profpic{
+  top: 2%;
+  /* left: 40%; */
+  width: 100px;
+  height: 100px;
+  /* object-fit: contain; */
+  border: 2px solid red;
+  border-radius: 5rem;
+  position: relative;
+  margin: 1rem 0;
+}
+.login-box .profpic img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5rem;
+}
 
 .login-box .user-box input:focus~label,
 .login-box .user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 1rem;
+}
+.login-box .newinput input:focus~label,
+.login-box .newinput input:valid~label {
   top: -20px;
   left: 0;
   color: #bdb8b8;
@@ -206,7 +232,41 @@ html {
     left: 100%;
   }
 }
-
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about .boxl h2{
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+.about .boxl .imgboxl{
+  max-width: 100vw;
+  padding: 2rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.about .boxl .imgl{
+  /* max-width: 70vw; */
+  width: 600px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 12px;
+}
+.about .boxl p{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.about .iconx{
+  font-size: 2rem;
+}
+.about .boxl{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: flex-start;
+}
 .login-box a span:nth-child(1) {
   bottom: 2px;
   left: -100%;
@@ -214,6 +274,19 @@ html {
   height: 2px;
   background: linear-gradient(90deg, transparent, #03f40f);
   animation: btn-anim1 2s linear infinite;
+}
+.footer .links li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Details{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 @media only screen and (max-width: 600px) {
   body{
@@ -248,5 +321,17 @@ html {
   }
   .footer .newseletter{
     padding: 1rem;
+  }
+  .about{
+    flex-wrap: wrap;
+    
+  }
+  
+  .about .boxl .imgl{
+    /* max-width: 70vw; */
+    width: 320px;
+  }
+  .about .boxr{
+    display: none;
   }
 }

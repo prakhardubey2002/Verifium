@@ -1,5 +1,7 @@
 import React from 'react'
 import '../css/Footer.css';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 const Footer = () => {
   return (
     <div className="footer">
@@ -13,10 +15,10 @@ const Footer = () => {
         <div className="links">
           <h2>Useful link</h2>
           <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Linkdln</li>
-            <li>Github</li>
+            {/* <li>Facebook</li>
+            <li>Instagram</li> */}
+            <li>Linkdln <LinkedInIcon/></li>
+            <li>Github <GitHubIcon/></li>
           </ul>
         </div>
         <div className="newseletter">
