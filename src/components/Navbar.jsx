@@ -4,10 +4,11 @@ import { Navigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import '../css/Components.css'
-
+import { useGlobalContext } from '../Context/WalletContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
+    const { isAddress,setIsAddress } = useGlobalContext();
     const [publicKey, setPublicKey] = useState('');
     const [isVisible, setVisibility] = useState(true);
 
@@ -16,7 +17,7 @@ const Navbar = () => {
         toast("Wallet connected")
     }
     const tos = () => {
-        toast(`Hi ${publicKey.substring(0, 17)}... `)
+        toast(`Hi ${isAddress.substring(0, 17)}... `)
     }
     return (
         <div className="navbar">
@@ -33,11 +34,12 @@ const Navbar = () => {
                 <Link to="/Register">Register</Link>
                 {isVisible ?
                     <div className="box" onClick={toggleVisibility} >
-                        <PhantomButton setPublicKey={setPublicKey} />
+                        <PhantomButton borderRadius="2rem" backgroundColor="#fff" color="black" setPublicKey={setIsAddress} />
                     </div>
                     :
                     <div className="key-box" onClick={tos}  >
-                        {publicKey.substring(0, 7)}...
+                        {/* {publicKey.substring(0, 7)}... */}
+                        {isAddress.substring(0, 7)}...
                     </div>
                 }
                 {/* {!isVisible && <Navigate to="/Details" replace={true} />} */}
