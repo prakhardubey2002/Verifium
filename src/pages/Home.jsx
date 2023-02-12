@@ -3,10 +3,17 @@ import blockchain from "../assets/Blockchain.json"
 import Lottie from "lottie-react"
 import Button from '../components/Button'
 import { toast } from 'react-toastify'
-import { Navigate } from 'react-router-dom'
+import { Navigate, NavLink } from 'react-router-dom'
+import { useGlobalContext } from '../Context/WalletContext';
 const Home = () => {
-  const notification = ()=>{
-    toast("Connect wallet beforehand to explore")
+  const { isAddress } = useGlobalContext();
+
+  const notification = () => {
+    if (isAddress != "user") {
+      console.log("Error")
+    } else {
+      toast(`Connect wallet beforehand to explore ${isAddress}`)
+    }
   }
   return (
     <div className="home">
@@ -18,22 +25,28 @@ const Home = () => {
         </div>
         <div className="content">
           <br />
-         <p>
-         Our project offers educational organizations to have their own Digital credentials offering page to give tamper proof badges, certificates, a degree in NFT format with a verification system to verify credentials
-         </p>
-         <br />
+          <p>
+            Our project offers educational organizations to have their own Digital credentials offering page to give tamper proof badges, certificates, a degree in NFT format with a verification system to verify credentials
+          </p>
+          <br />
         </div >
         {/* <button>
           Register
-        </button> */}<br/>
+        </button> */}<br />
         <div onClick={notification} >
-        <Button  word={"Explore"}/>
+          {isAddress !== "user" ? (
+            <NavLink key={isAddress} to={`Details/${isAddress}`}>
+              <Button word={"Explore"} />
+            </NavLink>
+          ) : (
+            <Button  word={"Explore"} disabled />
+          )}
         </div>
       </div>
       <div className="right">
         <div className="card">
-          
-          <Lottie className='art' animationData={blockchain} loop={true}/>
+
+          <Lottie className='art' animationData={blockchain} loop={true} />
         </div>
       </div>
     </div>

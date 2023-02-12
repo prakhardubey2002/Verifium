@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
     const { isAddress,setIsAddress } = useGlobalContext();
-    const [publicKey, setPublicKey] = useState('');
+    // const [publicKey, setPublicKey] = useState('');
     const [isVisible, setVisibility] = useState(true);
 
     const toggleVisibility = () => {
