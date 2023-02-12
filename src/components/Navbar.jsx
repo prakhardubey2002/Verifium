@@ -30,8 +30,8 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
                 <Link to="/About">About us</Link>
                 <Link to="/Guide">Guide</Link>
-                <Link to="/Login">Login</Link>
-                <Link to="/Register">Register</Link>
+                {/* <Link to="/Login">Login</Link> */}
+                {/* <Link to="/Register">Register</Link> */}
                 {isVisible ?
                     <div className="box" onClick={toggleVisibility} >
                         <PhantomButton borderRadius="2rem" backgroundColor="#fff" color="black" setPublicKey={setIsAddress} />
