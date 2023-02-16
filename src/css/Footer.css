@@ -1,5 +1,7 @@
 .footer {
-  background-color: rgba(0, 0, 0, 0.21);
+  /* background-color: rgba(0, 0, 0, 0.21);
+   */
+   background-color: #ef86a4;
   backdrop-filter: blur(20px);
   display: flex;
   min-height: 30vh;
@@ -8,6 +10,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 1rem;
+  color: #fff;
 }
 
 .footer .upper {
@@ -25,15 +28,25 @@
   margin-bottom: 0.4rem;
 }
 
+.footer .upper .first p:hover{
+  color: #fff;
+ 
+}
+
 .footer .upper .first p {
   font-weight: 400;
   /* margin-bottom: 0.4rem; */
+  transition: 0.2s ALL ease-in-out;
 }
 
 .footer .upper .links ul li {
   list-style: none;
   margin-left: 0.6rem;
   margin-bottom: 0.2rem;
+  transition: 0.2s ALL ease-in-out;
+}
+.footer .upper .links ul li:hover{
+  color: #fff;
 }
 
 .footer .lower {

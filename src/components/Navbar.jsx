@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { PhantomButton } from 'wallet-connect-buttons';
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import '../css/Components.css'
@@ -8,9 +8,52 @@ import { useGlobalContext } from '../Context/WalletContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
-    const { isAddress,setIsAddress } = useGlobalContext();
+    const { isAddress, setIsAddress } = useGlobalContext();
     // const [publicKey, setPublicKey] = useState('');
     const [isVisible, setVisibility] = useState(true);
+    useEffect(() => {
+
+        const handleSubmit = () => {
+            // event.preventDefault();
+            fetch('http://localhost:3000/ali',{
+                method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+            })
+            .then(response => response.json())
+            .then(
+                data=>{
+                    // console.log(data.address);
+                  
+                    console.log(data);
+                    // data.address.map(item => console.log(item));
+                    console.log(data[0].address)
+                }
+            )
+            if (isAddress !== "user") {
+
+                fetch('http://localhost:3000/ali/createwallet', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ isAddress })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        // console.log(JSON.stringify({ isAddress }));
+                        // setAddress('');
+                    })
+                    .catch(error => console.error(error));
+            }
+        };
+
+        handleSubmit();
+    }, [isAddress])
+
+
 
     const toggleVisibility = () => {
         setVisibility(!isVisible);
@@ -21,7 +64,7 @@ const Navbar = () => {
     }
     return (
         <div className="navbar">
-           
+
             <div className="logo">
                 <img src={logo} alt="Verifium" />
                 <p> <span>V</span>erifium</p>
@@ -44,9 +87,9 @@ const Navbar = () => {
                 }
                 {/* {!isVisible && <Navigate to="/Details" replace={true} />} */}
             </div>
-            
+
         </div>
-        
+
     )
 }
 

@@ -1,15 +1,16 @@
 import React from 'react'
-import blockchain from "../assets/Blockchain.json"
+// import blockchain from "../assets/Blockchain.json"
+import blockchain from "../assets/65395-blockchain-animation-2.json"
 import Lottie from "lottie-react"
 import Button from '../components/Button'
 import { toast } from 'react-toastify'
-import { Navigate, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useGlobalContext } from '../Context/WalletContext';
 const Home = () => {
   const { isAddress } = useGlobalContext();
 
   const notification = () => {
-    if (isAddress != "user") {
+    if (isAddress !== "user") {
       console.log("Error")
     } else {
       toast(`Connect wallet beforehand to explore ${isAddress}`)

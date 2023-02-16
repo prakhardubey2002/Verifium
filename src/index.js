@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { AppProvider } from './Context/WalletContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>//strict mode make website render2 time to detect bugs so removing it make frontend render only once
+  <>
     < AppProvider>
       <App />
     </AppProvider>
-  </React.StrictMode>
+  </>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

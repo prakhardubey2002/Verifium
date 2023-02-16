@@ -54,7 +54,7 @@ html {
 
 .home {
   width: 100vw;
-  min-height: 60vh;
+  min-height: 85vh;
   padding: 1rem;
   display: flex;
   /* flex-wrap: wrap; */
@@ -267,6 +267,9 @@ html {
   padding: 2rem;
   justify-content: flex-start;
 }
+.about .boxl .art{
+  width:  400px;
+}
 .login-box a span:nth-child(1) {
   bottom: 2px;
   left: -100%;
@@ -275,10 +278,12 @@ html {
   background: linear-gradient(90deg, transparent, #03f40f);
   animation: btn-anim1 2s linear infinite;
 }
+
 .footer .links li{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
 }
 .Details{
   min-height: 100vh;
@@ -287,6 +292,12 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.boxr{
+  min-width:20vw;
+}
+.boxr .art{
+  width: 100%;
 }
 @media only screen and (max-width: 600px) {
   body{

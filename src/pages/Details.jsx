@@ -9,18 +9,19 @@ const Details = () => {
   const [insitutename, setinsitutename] = useState("");
   const Submit = (e) => {
     // e.preventdefault();
-    const blog ={Name,insitutename,gen};
-    console.log(blog);
+    // const a=["name":"dartx", "released_year": 2011, "githut_rank": 13, "pypl_rank": 20, "tiobe_rank": 25]
+    // const blog ={Name,insitutename,gen};
+    // console.log(a);
     console.log("done");
     // setIsPending(true);
-    fetch('http://localhost:8000/blogs',{
-        method: 'POST',
-        headers: {"Content-Type":"application/json"},
-        body:JSON.stringify(blog)
-    }).then(() =>{
-        console.log("new blog added");
+    // fetch('http://localhost:3000/programming-languages/create',{
+        // method: 'POST',
+        // headers: {"Content-Type":"application/json"},
+        // body:JSON.stringify(blog)
+    // }).then(() =>{
+        // console.log("new blog added");
         // setIsPending(false);
-    })
+    // })
   }
   return (
     <div className="Details">

@@ -3,6 +3,8 @@ import art from '../assets/art.png'
 import flow from '../assets/flow.png'
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import acblockchain from "../assets/92445-crypto-bitcoin.json"
+import Lottie from "lottie-react"
 const About = () => {
   return (
     <div className="about">
@@ -38,10 +40,13 @@ const About = () => {
         <div className="imgboxl">
 
         <img className='imgl' src={flow} alt="" />
+        
         </div>
       </div>
       <div className="boxr">
-        <img src={art} alt="pic" />
+        {/* <img src={art} alt="pic" />
+         */}
+         <Lottie className='art' animationData={acblockchain} loop={true} />
       </div>
     </div>
   )
