@@ -11,7 +11,7 @@ const Home = () => {
 
   const notification = () => {
     if (isAddress !== "user") {
-      console.log("Error")
+      console.log("User Connected Succesfully")
     } else {
       toast(`Connect wallet beforehand to explore ${isAddress}`)
     }

@@ -25,10 +25,11 @@ const Details = () => {
   }
   return (
     <div className="Details">
+      <br />
       <div className="login-box">
         <label >Hi! {isAddress.substring(0, 17)}... </label>
         <div className="profpic">
-          {gen == "male" ? <img src={male} alt="" /> : <img src={female} alt="" />}
+          {gen === "male" ? <img src={male} alt="" /> : <img src={female} alt="" />}
         </div>
         <form >
           <br />

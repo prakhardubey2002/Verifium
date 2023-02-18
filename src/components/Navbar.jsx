@@ -15,22 +15,34 @@ const Navbar = () => {
 
         const handleSubmit = () => {
             // event.preventDefault();
-            fetch('http://localhost:3000/ali',{
+            const arx = [];
+            fetch('http://localhost:3000/ali', {
                 method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                headers: {
+                    'Content-Type': 'application/json'
+                },
             })
-            .then(response => response.json())
-            .then(
-                data=>{
-                    // console.log(data.address);
-                  
-                    console.log(data);
-                    // data.address.map(item => console.log(item));
-                    console.log(data[0].address)
-                }
-            )
+                .then(response => response.json())
+                .then(
+                    data => {
+                        // console.log(data.address);
+
+                        data.data.map((item, index) =>
+                            // console.log(index,item.address);
+                            // {index}
+                            // {item.address}
+                            arx.push(item.address)
+
+                        )
+                    }
+                )
+            console.log("d")
+            console.log(arx)
+            console.log(isAddress);
+            if(arx.includes(isAddress)){
+                console.log("val")
+            }
+            
             if (isAddress !== "user") {
 
                 fetch('http://localhost:3000/ali/createwallet', {
@@ -73,6 +85,7 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
                 <Link to="/About">About us</Link>
                 <Link to="/Guide">Guide</Link>
+                <Link to="/Admin">Admin</Link>
                 {/* <Link to="/Login">Login</Link> */}
                 {/* <Link to="/Register">Register</Link> */}
                 {isVisible ?
