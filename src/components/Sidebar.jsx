@@ -3,6 +3,8 @@ import Lottie from "lottie-react"
 import Layer from "../assets/Layer.json"
 import about from "../assets/about.json"
 import admin from "../assets/admin.json"
+import feedback from "../assets/feedback.json"
+import Home from "../assets/Home.json"
 import { Link } from 'react-router-dom'
 const Sidebar = () => {
     return (
@@ -10,7 +12,7 @@ const Sidebar = () => {
             <div className="main">
                 <ul>
                     <li><Link to="/">
-                        <Lottie className='articon' animationData={Layer} loop={1} pause={true} />
+                        <Lottie className='articon' animationData={Home} loop={1} pause={true} />
                         <p>Home </p>
                     </Link>
                     </li>
@@ -24,8 +26,8 @@ const Sidebar = () => {
                         <p>Admin</p>
                     </Link>
                     </li>
-                    <li><Link to="/">
-                        <Lottie className='articon' animationData={Layer} autoplay={false} loop={true} pause={true} />
+                    <li><Link to="/feedback">
+                        <Lottie className='articon' animationData={feedback} loop={1} pause={true} />
                         <p>Feedback</p>
                     </Link>
                     </li>

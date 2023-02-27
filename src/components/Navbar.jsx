@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { PhantomButton } from 'wallet-connect-buttons';
 // import { Navigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import '../css/Components.css'
 import { useGlobalContext } from '../Context/WalletContext';
@@ -76,11 +76,6 @@ const Navbar = () => {
     }
     return (
         <div className="navbar">
-            <div class="custom-shape-divider-top-1677523131">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
-                </svg>
-            </div>
             <div className="logo">
                 <img src={logo} alt="Verifium" />
                 <p> <span>V</span>erifium</p>
@@ -98,7 +93,7 @@ const Navbar = () => {
                     :
                     <div className="key-box" onClick={tos}  >
 
-                        {isAddress.substring(0, 7)}...
+                        {isAddress.substring(0, 8)}...
                     </div>
                 }
             </div>
