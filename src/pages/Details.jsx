@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useGlobalContext } from '../Context/WalletContext';
 import male from '../assets/male.png'
 import female from '../assets/female.jpg'
-import NFTList from '../components/NFTList';
 const Details = () => {
   const { isAddress } = useGlobalContext();
   const [gen, setgen] = useState("male");
@@ -56,7 +55,6 @@ const Details = () => {
             </a>
           </center>
         </form>
-    <NFTList/>
       </div>
     </div>
   </>

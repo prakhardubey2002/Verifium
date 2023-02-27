@@ -45,7 +45,7 @@ const Home = () => {
         </button> */}<br />
         <div onClick={notification} >
           {isAddress !== "user" ? (
-            <NavLink key={isAddress} to={`Details/${isAddress}`}>
+            <NavLink key={isAddress} to={`user/${isAddress}`}>
               <Button word={"Explore"} />
             </NavLink>
           ) : (

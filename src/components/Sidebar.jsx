@@ -31,9 +31,9 @@ const Sidebar = () => {
                         <p>Feedback</p>
                     </Link>
                     </li>
-                    <li><Link to="/createNFt">
+                    <li><Link to="/nftlist">
                         <Lottie className='articon' animationData={Layer} autoplay={false} loop={true} pause={true} />
-                        <p>NFT</p>
+                        <p>List NFT</p>
                     </Link>
                     </li>
                     

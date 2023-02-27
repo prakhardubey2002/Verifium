@@ -56,7 +56,8 @@ html {
   /* position: relative; */
   display: flex;
 }
-.sidebar{
+
+.sidebar {
   /* position: relative; */
   width: 12vw;
   min-height: 85vh;
@@ -75,25 +76,28 @@ html {
   background-color: black;
   /* list-style: none; */
 }
-.sidebar .main ul li{
+
+.sidebar .main ul li {
   list-style: none;
   /* width: 100%; */
   /* background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 15px 35px rgb(0 0 0 / 20%);
   border-radius: 1rem;
   backdrop-filter: blur(10px);*/
-  padding: 0.1rem 1rem ; 
-  margin: 1rem 1rem ; 
+  padding: 0.1rem 1rem;
+  margin: 1rem 1rem;
   transition: 0.2s all ease;
 }
-.sidebar .main ul li:hover{
+
+.sidebar .main ul li:hover {
   /* background-color: #325d9e; */
   border-bottom: 2px solid #093d89;
   border-top: 2px solid #1ce6d2;
   border-radius: 1rem;
   transform-origin: left;
 }
-.sidebar .main ul li a{
+
+.sidebar .main ul li a {
   /* list-style: none; */
   display: flex;
   justify-content: center;
@@ -101,37 +105,41 @@ html {
   text-decoration: none;
   color: #fff;
 }
-.sidebar .main ul li:hover .articon{
+
+.sidebar .main ul li:hover .articon {
   cursor: pointer;
 }
-.sidebar .main .articon{
+
+.sidebar .main .articon {
   width: 2.8rem;
   /* background-color: #fff; */
   margin: 0.1rem;
   /* border-radius: 1rem; */
 }
-.sidebar::after{
+
+.sidebar::after {
   content: '';
   width: 80px;
-    height: 80px;
-    background: #1ce6d2;
-    clip-path: circle(50%);
-    z-index: -1;
-    position: absolute;
-    top: 24%;
-    left: 0%;
+  height: 80px;
+  background: #1ce6d2;
+  clip-path: circle(50%);
+  z-index: -1;
+  position: absolute;
+  top: 24%;
+  left: 0%;
 
 }
-.sidebar::before{
+
+.sidebar::before {
   content: '';
   width: 50px;
-    height: 50px;
-    background: #1ce6d2;
-    clip-path: circle(50%);
-    z-index: -1;
-    position: absolute;
-    bottom: 24%;
-    right: -2%;
+  height: 50px;
+  background: #1ce6d2;
+  clip-path: circle(50%);
+  z-index: -1;
+  position: absolute;
+  bottom: 24%;
+  right: -2%;
 
 }
 
@@ -197,6 +205,7 @@ html {
   width: 100%;
   height: 100%;
 }
+
 /* .login{
   height: 70vh;
   width: 100vw;
@@ -208,7 +217,8 @@ html {
   top: 50%;
   left: 50%;
   width: 90%;
-  min-height: 80vh;
+  min-height: 100vh;
+  height: auto;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(24, 20, 20, 0.987);
@@ -244,13 +254,15 @@ html {
   pointer-events: none;
   transition: .5s;
 }
-.profpic{
+
+.profpic {
   border-radius: 12rem;
   width: 20%;
   height: 100%;
   border-radius: 1px solid plum;
 }
-.login-box .profpic{
+
+.login-box .profpic {
   top: 2%;
   /* left: 40%; */
   width: 100px;
@@ -261,7 +273,8 @@ html {
   position: relative;
   margin: 1rem 0;
 }
-.login-box .profpic img{
+
+.login-box .profpic img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -276,6 +289,7 @@ html {
   color: #bdb8b8;
   font-size: 1rem;
 }
+
 .login-box .newinput input:focus~label,
 .login-box .newinput input:valid~label {
   top: -20px;
@@ -299,7 +313,7 @@ html {
 }
 
 .login-box a:hover {
-  background:plum;
+  background: plum;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px plum,
@@ -323,44 +337,53 @@ html {
     left: 100%;
   }
 }
-.about{
+
+.about {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.about .boxl h2{
+
+.about .boxl h2 {
   font-size: 2.8rem;
   font-weight: 400;
 }
-.about .boxl .imgboxl{
+
+.about .boxl .imgboxl {
   max-width: 100vw;
   padding: 2rem;
   /* display: flex;
   justify-content: center;
   align-items: center; */
 }
-.about .boxl .imgl{
+
+.about .boxl .imgl {
   /* max-width: 70vw; */
   width: 600px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   border-radius: 12px;
 }
-.about .boxl p{
+
+.about .boxl p {
   font-size: 1.2rem;
   font-weight: 400;
 }
-.about .iconx{
+
+.about .iconx {
   font-size: 2rem;
 }
-.about .boxl{
+
+.about .boxl {
   display: flex;
   flex-direction: column;
   padding: 2rem;
   justify-content: flex-start;
 }
-.about .boxl .art{
-  width:  400px;
+
+.about .boxl .art {
+  width: 400px;
 }
+
 .login-box a span:nth-child(1) {
   bottom: 2px;
   left: -100%;
@@ -369,17 +392,19 @@ html {
   background: linear-gradient(90deg, transparent, #03f40f);
   animation: btn-anim1 2s linear infinite;
 }
+
 /* .footer{
   position: absolute;
   bottom: 0%;
 } */
-.footer .links li{
+.footer .links li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
 }
-.Details{
+
+.Details {
   min-height: 100vh;
   height: auto;
   width: 100vw;
@@ -389,12 +414,15 @@ html {
   align-items: center;
   position: relative;
 }
-.boxr{
-  min-width:20vw;
+
+.boxr {
+  min-width: 20vw;
 }
-.boxr .art{
+
+.boxr .art {
   width: 100%;
 }
+
 /* Loader css */
 .loadingspinner {
   --square: 26px;
@@ -405,8 +433,8 @@ html {
   --in-duration: 0.4s;
   --in-delay: 0.1s;
   --in-timing-function: ease-out;
-  width: calc( 3 * var(--offset) + var(--square));
-  height: calc( 2 * var(--offset) + var(--square));
+  width: calc(3 * var(--offset) + var(--square));
+  height: calc(2 * var(--offset) + var(--square));
   padding: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -418,8 +446,8 @@ html {
 .loadingspinner div {
   display: inline-block;
   background: darkorange;
-    /*background: var(--text-color);*/
-    /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
+  /*background: var(--text-color);*/
+  /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
   border: none;
   border-radius: 2px;
   width: var(--square);
@@ -432,203 +460,277 @@ html {
 }
 
 .loadingspinner #square1 {
-  left: calc( 0 * var(--offset) );
-  top: calc( 0 * var(--offset) );
+  left: calc(0 * var(--offset));
+  top: calc(0 * var(--offset));
   animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
-               squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+    squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
 }
 
 .loadingspinner #square2 {
-  left: calc( 0 * var(--offset) );
-  top: calc( 1 * var(--offset) );
+  left: calc(0 * var(--offset));
+  top: calc(1 * var(--offset));
   animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
-              squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+    squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
 }
 
 .loadingspinner #square3 {
-  left: calc( 1 * var(--offset) );
-  top: calc( 1 * var(--offset) );
+  left: calc(1 * var(--offset));
+  top: calc(1 * var(--offset));
   animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
-               squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+    squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
 }
 
 .loadingspinner #square4 {
-  left: calc( 2 * var(--offset) );
-  top: calc( 1 * var(--offset) );
+  left: calc(2 * var(--offset));
+  top: calc(1 * var(--offset));
   animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
-               squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+    squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
 }
 
 .loadingspinner #square5 {
-  left: calc( 3 * var(--offset) );
-  top: calc( 1 * var(--offset) );
+  left: calc(3 * var(--offset));
+  top: calc(1 * var(--offset));
   animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
-               squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+    squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
 }
 
 @keyframes square1 {
   0% {
-    left: calc( 0 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(0 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 
   8.333% {
-    left: calc( 0 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(0 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   100% {
-    left: calc( 0 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(0 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 }
 
 @keyframes square2 {
   0% {
-    left: calc( 0 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(0 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   8.333% {
-    left: calc( 0 * var(--offset) );
-    top: calc( 2 * var(--offset) );
+    left: calc(0 * var(--offset));
+    top: calc(2 * var(--offset));
   }
 
   16.67% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 2 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(2 * var(--offset));
   }
 
   25.00% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   83.33% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   91.67% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 
   100% {
-    left: calc( 0 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(0 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 }
 
 @keyframes square3 {
-  0%,100% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+
+  0%,
+  100% {
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   16.67% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   25.00% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 
   33.33% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 
   41.67% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   66.67% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   75.00% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 2 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(2 * var(--offset));
   }
 
   83.33% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 2 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(2 * var(--offset));
   }
 
   91.67% {
-    left: calc( 1 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 }
 
 @keyframes square4 {
   0% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   33.33% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   41.67% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 2 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(2 * var(--offset));
   }
 
   50.00% {
-    left: calc( 3 * var(--offset) );
-    top: calc( 2 * var(--offset) );
+    left: calc(3 * var(--offset));
+    top: calc(2 * var(--offset));
   }
 
   58.33% {
-    left: calc( 3 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(3 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   100% {
-    left: calc( 3 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(3 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 }
 
 @keyframes square5 {
   0% {
-    left: calc( 3 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(3 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   50.00% {
-    left: calc( 3 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(3 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   58.33% {
-    left: calc( 3 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(3 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 
   66.67% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 0 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(0 * var(--offset));
   }
 
   75.00% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
   }
 
   100% {
-    left: calc( 2 * var(--offset) );
-    top: calc( 1 * var(--offset) );
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
   }
+}
+
+.login-box .grd-back .NFTlist {
+  min-height: 50vh;
+}
+
+.login-box .Nftcard .card-body {
+  max-width: 526px;
+  max-height: 500px;
+  position: relative;
+}
+
+.login-box .Nftcard .card-body .card-image {
+  width: 40px;
+  height: 50px;
+}
+
+.NfTcontainer {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  flex-direction: row;
+}
+
+.listing {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 100vh;
+
+}
+
+.NfTcontainer .NFTlist {
+  /* width: 40vw; */
+  /* height: 80vh; */
+  display: flex;
+  flex-direction: row;
+}
+
+.NfTcontainer .NFTlist .Nftcard {
+  width: 190px;
+  height: 254px;
+  /* margin: 0 auto; */
+  background-color: #011522;
+  border-radius: 18px;
+  z-index: 1;
+  margin: 1rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+.NfTcontainer .NFTlist .Nftcard a {
+  text-decoration: none;
+  color: #fff;
+  cursor: none;
+}
+
+.NfTcontainer .NFTlist .Nftcard .card-image {
+  width: 150px;
+  height: 120px;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.user {
+  width: 80vw;
+  min-height: 80vh;
+  border-radius: 1rem;
+  background: rgba(24, 20, 20, 0.987);
+  box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
+  border-radius: 10px;
 }
 
 @keyframes squarefadein {
@@ -642,26 +744,28 @@ html {
     opacity: 1.0;
   }
 }
+
 table {
-  
+
   /* border: 2px solid rgb(255, 255, 255); */
-  width:80%;
+  width: 80%;
   min-height: 100px;
   /* background-color: #000000; */
 
 }
-  
+
 th {
   border: 1px solid rgb(255, 255, 255);
   padding: 1rem;
   /* border-radius: 12px; */
 }
-  
+
 td {
   text-align: center;
   padding: 1rem;
 }
-.Stats{
+
+.Stats {
   width: 80vw;
   min-height: 100vh;
   height: auto;
@@ -671,20 +775,24 @@ td {
   justify-content: center;
   align-items: center;
 }
-.Stats h2{
+
+.Stats h2 {
   font-weight: 400;
   font-size: 2.8rem;
 }
-.adx{
+
+.adx {
   width: 100vw;
   height: 120vh;
 }
-.Stats .cardx{
+
+.Stats .cardx {
   display: flex;
   justify-content: space-between;
   width: 80vw;
   flex-wrap: wrap;
 }
+
 .Stats .card {
   width: 200px;
   min-height: 154px;
@@ -693,24 +801,27 @@ td {
   background-color: #011522;
   border-radius: 8px;
   z-index: 1;
- }
- .Stats .card .card__content{
+}
+
+.Stats .card .card__content {
   padding: 1rem;
- }
- .Stats .card .card__content h2{
+}
+
+.Stats .card .card__content h2 {
   font-weight: 400;
   font-size: 1.2rem;
- }
- .Stats .tools {
+}
+
+.Stats .tools {
   display: flex;
   align-items: center;
   padding: 9px;
- }
- 
- .Stats  .circle {
+}
+
+.Stats .circle {
   padding: 0 4px;
- }
- 
+}
+
 .Stats .box {
   display: inline-block;
   align-items: center;
@@ -718,65 +829,76 @@ td {
   height: 10px;
   padding: 1px;
   border-radius: 50%;
- }
- 
- .Stats .red {
+}
+
+.Stats .red {
   background-color: #ff605c;
- }
- 
- .Stats .yellow {
+}
+
+.Stats .yellow {
   background-color: #ffbd44;
- }
- 
- .Stats .green {
+}
+
+.Stats .green {
   background-color: #00ca4e;
- }
- 
+}
+
 @media only screen and (max-width: 600px) {
-  body{
+  body {
     overflow: hidden;
   }
-  .home{
+
+  .home {
     max-width: 100vw;
   }
-  .home .right{
+
+  .home .right {
     display: none;
   }
-  .mx .navbar{
+
+  .mx .navbar {
     max-width: 100vw;
     background: black;
   }
-  .navbar .list a{
+
+  .navbar .list a {
     display: none;
   }
-  .footer{
+
+  .footer {
     max-width: 100vw;
   }
-  .footer .upper{
+
+  .footer .upper {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .footer .upper> *{
+
+  .footer .upper>* {
     padding: 1rem 0;
   }
-  .footer .upper .first{
+
+  .footer .upper .first {
     /* padding: 2rem; */
   }
-  .footer .newseletter{
+
+  .footer .newseletter {
     padding: 1rem;
   }
-  .about{
+
+  .about {
     flex-wrap: wrap;
-    
+
   }
-  
-  .about .boxl .imgl{
+
+  .about .boxl .imgl {
     /* max-width: 70vw; */
     width: 320px;
   }
-  .about .boxr{
+
+  .about .boxr {
     display: none;
   }
 }

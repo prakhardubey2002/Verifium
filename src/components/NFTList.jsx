@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useGlobalContext } from '../Context/WalletContext';
+import Details from "../pages/Details";
+import { Link } from "react-router-dom";
 const ListAll = () => {
     const { isAddress, setIsAddress } = useGlobalContext();
     const xKey = "5Bg8vrE-x6zPYo6S";//enter your x api key here
@@ -30,19 +32,20 @@ const ListAll = () => {
             });
     };
     return (
-        <div className="grd-back">
-            <div className="text-center p-3">
-                <button
-                    className="button-24"
-                    onClick={fetchNFTs}
-                >
-                    Get
-                </button>
-            </div>
-            <div className="container-lg">
-                <div className="cards-section py-4">
+        <>
+                
+            <div className="NfTcontainer">
+                <div className="grd-back">
+                    <div className="text-center p-3">
+                        <button
+                            className="button-24"
+                            onClick={fetchNFTs}
+                        >
+                            Show NFts and Minted Certificates
+                        </button>
+                    </div>
                     <div className="row">
-                        {isLoaded && <div class="loadingspinner">
+                        {!isLoaded && <div class="loadingspinner">
                             <div id="square1"></div>
                             <div id="square2"></div>
                             <div id="square3"></div>
@@ -50,27 +53,31 @@ const ListAll = () => {
                             <div id="square5"></div>
                         </div>
                         }
-                        {isLoaded &&
-                            dataFetched.result.map((item) => (
-                                <div className="NFTlist" key={item.mint}>
-                                    <div className="Nftcard">
-                                        <div className="card-body">
-                                            <a href={`/get-details?token_address=${item.mint}&network=${network}`} target="_blank" rel="noreferrer">
-                                                <img className="card-image img-fluid" src={item.image_uri} alt="img" />
-                                            </a>
-                                            <a href={`/get-details?token_address=${item.mint}&network=${network}`} target="_blank" rel="noreferrer">
-                                                <h5>{item.name}</h5>
-                                            </a>
+                        <div className="listing">
+                            {isLoaded &&
+                                dataFetched.result.map((item) => (
 
+                                    <div className="NFTlist" key={item.mint}>
+                                        <div className="Nftcard">
+                                            <div className="card-body">
+                                                <a href={`/get-details?token_address=${item.mint}&network=devent`} target="_blank" rel="noreferrer">
+                                                    <img className="card-image" src={item.image_uri} alt="img" />
+                                                </a>
+                                                <a href={`/get-details?token_address=${item.mint}&network=${network}`} target="_blank" rel="noreferrer">
+                                                    <h5>NFT Name : {item.name}</h5>
+                                                    <h5>NFT Mint : {item.mint.substring(0, 17)}....</h5>
+                                                    <h5>NFT Owner : {item.owner.substring(0, 17)}....</h5>
+                                                </a>
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-
+                                ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

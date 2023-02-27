@@ -12,6 +12,8 @@ import { ToastContainer } from 'react-toastify';
 import Admin from './pages/Admin';
 import Adx from './pages/Adx';
 import Sidebar from './components/Sidebar';
+import NFTList from './components/NFTList'
+import User from './pages/User';
 // import { ThirdwebSDKProvider } from "@thirdweb-dev/react/solana";
 // import { useWallet } from "@solana/wallet-adapter-react";
 function App() {
@@ -31,6 +33,7 @@ function App() {
           <Sidebar />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/user/:id' element={<User />} />
             <Route path='/About' element={<About />} />
             <Route path='/Details/:id' element={<Details />} />
             <Route path='/Register' element={<Register />} />
@@ -39,6 +42,7 @@ function App() {
             <Route path='/Details' element={<Details />} />
             <Route path='/admin' element={<Admin />} />
             <Route path='/adx' element={<Adx />} />
+            <Route path='/nftlist/:id' element={<NFTList/>}/>
           </Routes>
 
         </BrowserRouter>
