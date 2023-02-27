@@ -18,7 +18,16 @@ const Home = () => {
   }
   return (
     <div className="home">
+      {/* <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div> */}
       <div className="left">
+
         <div className="heading">
           <h2>Fast and Effcient way to generate Degree,certificate and badges </h2>
           {/* <h3>On your Figertip in couple of seconds</h3><br /> */}
@@ -40,7 +49,7 @@ const Home = () => {
               <Button word={"Explore"} />
             </NavLink>
           ) : (
-            <Button  word={"Explore"} disabled />
+            <Button word={"Explore"} disabled />
           )}
         </div>
       </div>

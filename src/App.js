@@ -20,7 +20,6 @@ function App() {
   return (
     // <ThirdwebSDKProvider network={"devnet"} wallet={wallet}>
     <div className="mx">
-      
       <Navbar />
       <div className="app">
         <BrowserRouter>
@@ -45,7 +44,7 @@ function App() {
         </BrowserRouter>
       </div>
       <Footer />
-      </div>
+    </div>
     // </ThirdwebSDKProvider>
   );
 }

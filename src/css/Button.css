@@ -1,14 +1,24 @@
 button {
-    font-weight: 600;
+    font-weight: 400;
     border: solid 2px black;
     outline: 0;
     padding: 1rem 4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 0.08rem;
     background-color: white;
     border-radius: 0.35rem;
     position: relative;
     cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.style-button{
+    border-radius: 2rem;
+    background-color: rgb(121, 121, 233);
+    color: #fff;
+    border: 2px solid #fff;
 }
 /* button::after {
     content: '';

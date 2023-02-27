@@ -84,6 +84,8 @@ html {
     text-transform: uppercase;
     font-size: 15px;
     transition: all .5s ease;
+    z-index: 10000000000000000000000000000000000;
+    cursor: pointer;
 }
 
 .key-box:hover {

@@ -11,6 +11,7 @@ html {
   overflow-x: hidden;
 }
 
+
 :root {
   --Background--color: #1b1b1b;
   --Primary: #aba9a9;
@@ -25,7 +26,7 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: black;
 }
 
 /* Handle */
@@ -56,9 +57,10 @@ html {
   display: flex;
 }
 .sidebar{
-  position: relative;
+  /* position: relative; */
   width: 12vw;
   min-height: 85vh;
+  max-height: 85vh;
   /* height: 100%; */
   padding: 1rem;
   /* left: 0%; */
@@ -131,6 +133,25 @@ html {
     bottom: 24%;
     right: -2%;
 
+}
+.custom-shape-divider-top-1677523131 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1677523131 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 112px;
+}
+
+.custom-shape-divider-top-1677523131 .shape-fill {
+  fill: #1CE6D2;
 }
 .home {
   /* position: absolute;
