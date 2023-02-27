@@ -11,31 +11,42 @@ import Details from './pages/Details';
 import { ToastContainer } from 'react-toastify';
 import Admin from './pages/Admin';
 import Adx from './pages/Adx';
+import Sidebar from './components/Sidebar';
+// import { ThirdwebSDKProvider } from "@thirdweb-dev/react/solana";
+// import { useWallet } from "@solana/wallet-adapter-react";
 function App() {
+  // const desiredNetwork = "devnet";
+  // const wallet = useWallet();
   return (
-    <div className="app">
-      <BrowserRouter>
-        <ToastContainer
-        // position="top-center"
-        // autoClose={5000}
-        // pauseOnHover
-        />
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Details/:id' element={<Details />} />
-          <Route path='/Register' element={<Register />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/upload' element={<Upload />} />
-          <Route path='/Details' element={<Details />} />
-          <Route path='/admin' element={<Admin />} />
-          <Route path='/adx' element={<Adx />} />
-        </Routes>
-        <Footer />
+    // <ThirdwebSDKProvider network={"devnet"} wallet={wallet}>
+    <div className="mx">
+      
+      <Navbar />
+      <div className="app">
+        <BrowserRouter>
+          <ToastContainer
+          // position="top-center"
+          // autoClose={5000}
+          // pauseOnHover
+          />
+          <Sidebar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/About' element={<About />} />
+            <Route path='/Details/:id' element={<Details />} />
+            <Route path='/Register' element={<Register />} />
+            <Route path='/Login' element={<Login />} />
+            <Route path='/upload' element={<Upload />} />
+            <Route path='/Details' element={<Details />} />
+            <Route path='/admin' element={<Admin />} />
+            <Route path='/adx' element={<Adx />} />
+          </Routes>
 
-      </BrowserRouter>
-    </div>
+        </BrowserRouter>
+      </div>
+      <Footer />
+      </div>
+    // </ThirdwebSDKProvider>
   );
 }
 

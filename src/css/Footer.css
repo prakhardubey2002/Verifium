@@ -1,7 +1,7 @@
 .footer {
   /* background-color: rgba(0, 0, 0, 0.21);
    */
-   background-color: #ef86a4;
+   background-color: black;
   backdrop-filter: blur(20px);
   display: flex;
   min-height: 30vh;

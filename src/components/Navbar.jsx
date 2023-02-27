@@ -82,23 +82,21 @@ const Navbar = () => {
                 <p> <span>V</span>erifium</p>
             </div>
             <div className="list">
-                <Link to="/">Home</Link>
+                {/* <Link to="/">Home</Link>
                 <Link to="/About">About us</Link>
                 <Link to="/Guide">Guide</Link>
-                <Link to="/Admin">Admin</Link>
-                {/* <Link to="/Login">Login</Link> */}
-                {/* <Link to="/Register">Register</Link> */}
+                <Link to="/Admin">Admin</Link> */}
+          
                 {isVisible ?
                     <div className="box" onClick={toggleVisibility} >
                         <PhantomButton borderRadius="2rem" backgroundColor="#fff" color="black" setPublicKey={setIsAddress} />
                     </div>
                     :
                     <div className="key-box" onClick={tos}  >
-                        {/* {publicKey.substring(0, 7)}... */}
+                        
                         {isAddress.substring(0, 7)}...
                     </div>
                 }
-                {/* {!isVisible && <Navigate to="/Details" replace={true} />} */}
             </div>
 
         </div>
