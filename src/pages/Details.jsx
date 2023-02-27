@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useGlobalContext } from '../Context/WalletContext';
 import male from '../assets/male.png'
 import female from '../assets/female.jpg'
+import { Link, useNavigate } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 const Details = () => {
   const { isAddress } = useGlobalContext();
   const [gen, setgen] = useState("male");
@@ -10,13 +12,24 @@ const Details = () => {
   const Submit = (e) => {
     console.log("done");
   }
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  }
   return (<>
 
 
 
     <div className="Details">
+      
       <br />
       <div className="login-box">
+      <button onClick={goBack} >
+          <ArrowBackIcon />
+          Go Back
+      </button>
+        <br />
+        <br />
         <label >Hi! {isAddress.substring(0, 17)}... </label>
         <div className="profpic">
           {gen === "male" ? <img src={male} alt="" /> : <img src={female} alt="" />}

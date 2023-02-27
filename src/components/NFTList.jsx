@@ -3,7 +3,12 @@ import axios from "axios";
 import { useGlobalContext } from '../Context/WalletContext';
 import Details from "../pages/Details";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 const ListAll = () => {
+    const navigate = useNavigate();
+	const goBack = () => {
+		navigate(-1);
+	}
     const { isAddress, setIsAddress } = useGlobalContext();
     const xKey = "5Bg8vrE-x6zPYo6S";//enter your x api key here
     const [network, setNetwork] = useState("devnet");
@@ -36,7 +41,10 @@ const ListAll = () => {
                 
             <div className="NfTcontainer">
                 <div className="grd-back">
-                    <div className="text-center p-3">
+                    <div className="text-center">
+                       <button onClick={goBack} >
+                        go Back
+                       </button>
                         <button
                             className="button-24"
                             onClick={fetchNFTs}
