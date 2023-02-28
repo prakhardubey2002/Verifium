@@ -9,10 +9,25 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 const Admin = () => {
     const [loader, setLoader] = useState(false);
     const [loaderx, setLoaderx] = useState(true);
+    const [load, setLoad] = useState(false);
     const [data, setData] = useState();
+    const [user, setUser] = useState();
     const { isAddress, setIsAddress } = useGlobalContext();
     useEffect(() => {
         console.log("z")
+        fetch('http://localhost:3000/ali/UserDataView', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(response => response.json())
+            .then(users => {
+                console.log(users);
+                setUser(users);
+                // setLoader(false);
+                setLoad(true);
+            })
+
         fetch('http://localhost:3000/ali', {
             method: 'GET',
             headers: {
@@ -126,20 +141,47 @@ const Admin = () => {
                             <br />
                         </div>
                         {/* <SupervisorAccountIcon /> */}
-                        <h2>All Current Registered  User ! </h2>
-                        <br />
-                        <table>
-                            <tr>
-                                <th>Sno</th>
-                                <th>Address</th>
-                            </tr>
-                            {data.data.map((item, index) =>
+                        {
+                            load && <>
+                                <h2>Registered User Data  </h2>
+                                <br />
+                                <table>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>InstituteName</th>
+                                        <th>Course </th>
+                                        <th>Feedback</th>
+                                    </tr>
+                                    {user?.data?.map((datax) =>
+                                        <tr>
+                                            <th>{datax.id}</th>
+                                            <th>{datax.name}</th>
+                                            <th>{datax.institute_name}</th>
+                                            <th>{datax.course_specialisation}</th>
+                                            <th>{datax.feedback}</th>
+                                        </tr>
+                                    )}
+                                </table></>
+                        }
+                        <>
+                            <h2>All Current Registered  User ! </h2>
+                            <br />
+                            <table>
                                 <tr>
-                                    <th>{index}</th>
-                                    <th>{item.address}</th>
+                                    <th>Sno</th>
+                                    <th>Address</th>
                                 </tr>
-                            )}
-                        </table>
+                                {data.data.map((item, index) =>
+                                    <tr>
+                                        <th>{index}</th>
+                                        <th>{item.address}</th>
+                                    </tr>
+                                )}
+                            </table>
+
+
+                        </>
 
                     </div>
                 </>}
