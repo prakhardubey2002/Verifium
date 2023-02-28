@@ -4,18 +4,45 @@ import male from '../assets/male.png'
 import female from '../assets/female.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { toast } from 'react-toastify';
+
 const Details = () => {
   const { isAddress } = useGlobalContext();
   const [gen, setgen] = useState("male");
   const [Name, setName] = useState("");
   const [insitutename, setinsitutename] = useState("");
-  const Submit = (e) => {
-    console.log("done");
-  }
+  const [course, setCourse] = useState("");
+  const [feedback, setFeedback] = useState("");
+
+  const Submit = async (e) => {
+    if (e) {
+      e.preventDefault();
+    }
+    const formData = {
+      Name,
+      insitutename,
+      course,
+      feedback,
+    };
+  
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    };
+  
+    const response = await fetch('http://localhost:3000/ali/adddata', options);
+    const data = await response.json();
+     toast(`Created ${data.message} `);
+    console.log(data);
+  };
+
+  
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
   }
+  
   return (<>
 
 
@@ -46,11 +73,11 @@ const Details = () => {
             <label>Institution Name</label>
           </div>
           <div className="user-box">
-            <input required="" name="" type="text" />
+            <input required="" name="" value={course} onChange={(e)=>setCourse(e.target.value)} type="text" />
             <label>Course Specialisation</label>
           </div>
           <div className="user-box">
-            <input required="" name="" type="text" />
+            <input required="" name="" value={feedback} onChange={(e)=>setFeedback(e.target.value)} type="text" />
             <label>Feedback</label>
           </div>
           <div className='newinput'>
@@ -62,7 +89,7 @@ const Details = () => {
           </div>
 
           <center>
-            <a onClick={() => Submit()} >
+            <a onClick={(e) => Submit(e)} >
               SEND
               <span />
             </a>
