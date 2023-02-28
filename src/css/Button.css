@@ -10,6 +10,9 @@ button {
     position: relative;
     cursor: pointer;
     transition: 0.2s all ease-in-out;
+    -webkit-box-shadow: 10px 10px 36px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 36px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 36px -7px rgba(0,0,0,0.75);
 }
 button:hover{
     transform: scale(1.1);
@@ -19,6 +22,9 @@ button:hover{
     background-color: rgb(121, 121, 233);
     color: #fff;
     border: 2px solid #fff;
+    -webkit-box-shadow: 10px 10px 36px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 36px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 36px -7px rgba(0,0,0,0.75);
 }
 /* button::after {
     content: '';

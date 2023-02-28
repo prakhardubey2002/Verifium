@@ -8,8 +8,7 @@ const Footer = () => {
       <div className="upper">
         <div className="first">
           <h2>Verifium</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, aperiam! Lorem ipsum dolor sit amet, <br/>consectetur adipisicing elit. Ullam, vero.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Sit neque aut iusto laborum tempore nobis saepe, nam ducimus corporis rem!
+          <p>Our project offers educational organizations to have their own Digital credentials offering page to give tamper proof badges, <br/>certificates, a degree in NFT format with a verification system to verify credentials
           </p>
         </div>
         <div className="links">
