@@ -5,7 +5,8 @@ import SignalWifiStatusbar4BarIcon from '@mui/icons-material/SignalWifiStatusbar
 import PersonIcon from '@mui/icons-material/Person';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import { useGlobalContext } from '../Context/WalletContext';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+// import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import Person4Icon from '@mui/icons-material/Person4';
 const Admin = () => {
     const [loader, setLoader] = useState(false);
     const [loaderx, setLoaderx] = useState(true);
@@ -53,6 +54,7 @@ const Admin = () => {
         <>
             <div className="admin">
                 {loader && <>
+                
                     <div className='Stats'>
                         <div className="operat">
 
@@ -110,10 +112,32 @@ const Admin = () => {
                                     </div>
                                     <div class="card__content">
                                         <PersonIcon />
-                                        <h2>Total User</h2>
+                                        <h2>Total Wallet User</h2>
                                         <p>
                                             {
                                                 data.data.length
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="tools">
+                                        <div class="circle">
+                                            <span class="red box"></span>
+                                        </div>
+                                        <div class="circle">
+                                            <span class="yellow box"></span>
+                                        </div>
+                                        <div class="circle">
+                                            <span class="green box"></span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <Person4Icon />
+                                        <h2>Total Info User</h2>
+                                        <p>
+                                            {
+                                                user.data.length
                                             }
                                         </p>
                                     </div>
@@ -141,6 +165,28 @@ const Admin = () => {
                             <br />
                         </div>
                         {/* <SupervisorAccountIcon /> */}
+                       <>
+                       
+                       </>
+                        <>
+                            <h2>All Current Registered  Address ! </h2>
+                            <br />
+                            <table>
+                                <tr>
+                                    <th>Sno</th>
+                                    <th>Address</th>
+                                </tr>
+                                {data.data.map((item, index) =>
+                                    <tr>
+                                        <th>{index}</th>
+                                        <th>{item.address}</th>
+                                    </tr>
+                                )}
+                            </table>
+
+
+                        </>
+                        <>
                         {
                             load && <>
                                 <h2>Registered User Data  </h2>
@@ -164,25 +210,7 @@ const Admin = () => {
                                     )}
                                 </table></>
                         }
-                        <>
-                            <h2>All Current Registered  User ! </h2>
-                            <br />
-                            <table>
-                                <tr>
-                                    <th>Sno</th>
-                                    <th>Address</th>
-                                </tr>
-                                {data.data.map((item, index) =>
-                                    <tr>
-                                        <th>{index}</th>
-                                        <th>{item.address}</th>
-                                    </tr>
-                                )}
-                            </table>
-
-
                         </>
-
                     </div>
                 </>}
                 {loaderx && <div class="loadingspinner">
