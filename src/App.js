@@ -13,7 +13,9 @@ import Admin from './pages/Admin';
 import Adx from './pages/Adx';
 import Sidebar from './components/Sidebar';
 import NFTList from './components/NFTList'
+// import MintNft from './pages/MintNft'
 import User from './pages/User';
+import Create from './pages/MintNft';
 // import { ThirdwebSDKProvider } from "@thirdweb-dev/react/solana";
 // import { useWallet } from "@solana/wallet-adapter-react";
 function App() {
@@ -42,7 +44,8 @@ function App() {
             <Route path='/Details' element={<Details />} />
             <Route path='/admin' element={<Admin />} />
             <Route path='/adx' element={<Adx />} />
-            <Route path='/nftlist/:id' element={<NFTList/>}/>
+            <Route path='/MintNft/:id' element={<Create/>}/>
+            <Route path='/NFTList/:id' element={<NFTList/>}/>
           </Routes>
 
         </BrowserRouter>

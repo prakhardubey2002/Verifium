@@ -55,6 +55,8 @@ html {
   color: #fff;
   /* position: relative; */
   display: flex;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .sidebar {
@@ -749,6 +751,8 @@ html {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .user button a{
   text-decoration: none;
@@ -877,12 +881,26 @@ td {
 .Stats .green {
   background-color: #00ca4e;
 }
-
+.MintNFT{
+  background-color: #00ca4e;
+}
+.MintButton{
+  text-align: center;
+}
+.Mintbtn input{
+  background-color: #00ca4e;
+  color: #00ca4e;
+  z-index: 1000000;
+  border: 1rem solid black;
+}
 @media only screen and (max-width: 600px) {
   body {
     overflow: hidden;
   }
-
+  .app{
+    justify-content: center;
+  align-items: center;
+  }
   .home {
     max-width: 100vw;
     flex-wrap: wrap-reverse;
@@ -919,10 +937,6 @@ td {
 
   .footer .upper>* {
     padding: 1rem 0;
-  }
-
-  .footer .upper .first {
-    /* padding: 2rem; */
   }
 
   .footer .newseletter {

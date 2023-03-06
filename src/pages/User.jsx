@@ -13,12 +13,12 @@ const User = () => {
             <br />
             <h1>Hi {isAddress.substring(0, 12)}....   <AccessibilityNewIcon /></h1>
             <div className="User">
-                <h2>New User? Add your data here first : <button><Link to={`/details/${isAddress}`} >Add User Data</Link></button></h2>
+                <h2>New User? Add your data here first :<Link to={`/details/${isAddress}`} > <button>Add User Data</button></Link></h2>
                 <br />
-                <h2>List your Current NFT:  <button><Link to={`/nftlist/${isAddress}`} >List NFT and Certificates</Link></button></h2>
+                <h2>List your Current NFT: <Link to={`/nftlist/${isAddress}`} > <button>List NFT and Certificates</button></Link></h2>
 
                 <br />
-                <h2>Mint Credential as NFT:  <button><Link to={`/nftlist/${isAddress}`} >Mint Credential</Link></button></h2>
+                <h2>Mint Credential as NFT: <Link to={`/nftlist/${isAddress}`} > <button>Mint Credential</button></Link></h2>
             </div>
         </div>
     )

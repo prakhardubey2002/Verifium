@@ -6,7 +6,9 @@ import admin from "../assets/admin.json"
 import feedback from "../assets/feedback.json"
 import Home from "../assets/Home.json"
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../Context/WalletContext';
 const Sidebar = () => {
+    const { isAddress, setIsAddress } = useGlobalContext();
     return (
         <div className="sidebar">
             <div className="main">
@@ -31,7 +33,7 @@ const Sidebar = () => {
                         <p>Feedback</p>
                     </Link>
                     </li>
-                    <li><Link to="/nftlist">
+                    <li><Link to={`MintNft/${isAddress}`}>
                         <Lottie className='articon' animationData={Layer} autoplay={false} loop={true} pause={true} />
                         <p>List NFT</p>
                     </Link>
