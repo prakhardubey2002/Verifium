@@ -11,8 +11,10 @@ const Admin = () => {
     const [loader, setLoader] = useState(false);
     const [loaderx, setLoaderx] = useState(true);
     const [load, setLoad] = useState(false);
+    const [loadem, setLoadem] = useState(false);
     const [data, setData] = useState();
     const [user, setUser] = useState();
+    const [feed,setFeed]=useState();
     const { isAddress, setIsAddress } = useGlobalContext();
     useEffect(() => {
         console.log("z")
@@ -43,9 +45,25 @@ const Admin = () => {
                     console.log(data);
                     setData(data);
                     setLoader(true);
-                    setLoaderx(false);
+                    
                     // data.address.map(item => console.log(item));
                     // console.log(data[0].address)
+                }
+            )
+
+
+            fetch('http://localhost:3000/ali/feedbacklist',{
+                method:'GET',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+            }).then(response=>response.json())
+            .then(
+                data =>{
+                    console.log(data);
+                    setFeed(data);
+                    setLoadem(true);
+                    setLoaderx(false);
                 }
             )
     }, [])
@@ -206,6 +224,31 @@ const Admin = () => {
                                             <th>{datax.institute_name}</th>
                                             <th>{datax.course_specialisation}</th>
                                             <th>{datax.feedback}</th>
+                                        </tr>
+                                    )}
+                                </table></>
+                        }
+                        </>
+                        <>
+                        {
+                            loadem && <>
+                                <h2>Feedback data Data  </h2>
+                                <br />
+                                <table>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Feedback</th>
+                                        <th>Created at</th>
+                                        {/* <th>Updated at</th> */}
+                                        {/* <th>Feedback</th> */}
+                                    </tr>
+                                    {feed?.data?.map((datax) =>
+                                        <tr>
+                                            <th>{datax.id}</th>
+                                            <th>{datax.feedback_text}</th>
+                                            <th>{datax.created_at}</th>
+                                            {/* <th>{datax.updated_at}</th> */}
+                                            {/* <th>{datax.feedback}</th> */}
                                         </tr>
                                     )}
                                 </table></>

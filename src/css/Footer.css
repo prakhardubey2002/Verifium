@@ -1,7 +1,13 @@
 .footer {
   /* background-color: rgba(0, 0, 0, 0.21);
    */
-   background-color: black;
+  /* background-color: black; */
+  background: #36D1DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   backdrop-filter: blur(20px);
   display: flex;
   min-height: 30vh;
@@ -28,9 +34,9 @@
   margin-bottom: 0.4rem;
 }
 
-.footer .upper .first p:hover{
+.footer .upper .first p:hover {
   color: #fff;
- 
+
 }
 
 .footer .upper .first p {
@@ -45,7 +51,8 @@
   margin-bottom: 0.2rem;
   transition: 0.2s ALL ease-in-out;
 }
-.footer .upper .links ul li:hover{
+
+.footer .upper .links ul li:hover {
   color: #fff;
 }
 
@@ -66,6 +73,7 @@
   backdrop-filter: blur(10px);
   color: #fff;
 }
-.footer .upper .newseletter input::placeholder{
+
+.footer .upper .newseletter input::placeholder {
   color: #fff;
 }
