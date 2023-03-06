@@ -4,6 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { toast } from 'react-toastify';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 const Footer = () => {
   const [feedback, setFeedback] = useState('');
   const Submit = async (e) => {
@@ -57,6 +58,11 @@ const Footer = () => {
         <p>
 
           Copyright © 2023 verifium All rights reserved.
+        </p>
+        <br />
+        <p>
+
+         Made by Prakhar Dubey with <FavoriteIcon className='icon'/>
         </p>
       </div>
     </div>

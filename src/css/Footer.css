@@ -58,8 +58,23 @@
 
 .footer .lower {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.footer .lower p{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+.footer .lower p:last-child{
+  font-size: 12px;
+  color: black;
+}
+.footer .lower p:last-child .icon{
+  font-size: 12px;
+  color: black;
 }
 
 .footer .upper .newseletter input {
