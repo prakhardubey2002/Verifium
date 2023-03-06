@@ -51,7 +51,14 @@ html {
   /* background: linear-gradient(to right, #ee9ca7, #ffdde1); */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* background-color: #262626; */
-  background-color: black;
+  /* background-color: black; */
+  background: #36D1DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #fff;
   /* position: relative; */
   display: flex;
@@ -61,21 +68,21 @@ html {
 
 .sidebar {
   /* position: relative; */
-  width: 12vw;
+  width: 14vw;
   min-height: 85vh;
   max-height: 85vh;
   /* height: 100%; */
   padding: 1rem;
   /* left: 0%; */
-  background-color: #1f2025;
+  /* background-color: #1f2025; */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 15px 35px rgb(0 0 0 / 20%);
-  border-radius: 36px;
-  backdrop-filter: blur(20px);
-  background-color: black;
+  /* background: rgba(255, 255, 255, 0.05); */
+  /* box-shadow: 0 15px 35px rgb(0 0 0 / 20%); */
+  /* border-radius: 36px; */
+  /* backdrop-filter: blur(20px); */
+  /* background-color: black; */
   /* list-style: none; */
 }
 
@@ -127,7 +134,7 @@ html {
   clip-path: circle(50%);
   z-index: -1;
   position: absolute;
-  top: 24%;
+  top: 2%;
   left: 0%;
 
 }
@@ -140,8 +147,8 @@ html {
   clip-path: circle(50%);
   z-index: -1;
   position: absolute;
-  bottom: 24%;
-  right: -2%;
+  bottom: 2%;
+  right: 1%;
 
 }
 
@@ -214,12 +221,13 @@ html {
   width: 100vw;
   position: relative;
 } */
-.login-box button{
+.login-box button {
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
+
 .login-box {
   position: absolute;
   top: 50%;
@@ -691,16 +699,19 @@ html {
   /* align-items: center; */
   flex-direction: row;
 }
-.NfTcontainer .text-center{
+
+.NfTcontainer .text-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.NfTcontainer .text-center a{
+
+.NfTcontainer .text-center a {
   text-decoration: none;
   color: black;
 }
+
 .listing {
   display: flex;
   flex-wrap: wrap;
@@ -754,24 +765,30 @@ html {
   justify-content: center;
   align-items: center;
 }
-.user button a{
+
+.user button a {
   text-decoration: none;
   color: #011522;
 }
-.user  h1,h2{
+
+.user h1,
+h2 {
   font-weight: 200;
 }
-.user .profpic{
+
+.user .profpic {
   height: 100px;
   width: 100px;
   position: relative;
   border: 2px solid #fff;
 }
-.user .profpic img{
+
+.user .profpic img {
   width: 100%;
   height: 100%;
   border-radius: 20rem;
 }
+
 @keyframes squarefadein {
   0% {
     transform: scale(0.75);
@@ -881,26 +898,32 @@ td {
 .Stats .green {
   background-color: #00ca4e;
 }
-.MintNFT{
+
+.MintNFT {
   background-color: #00ca4e;
 }
-.MintButton{
+
+.MintButton {
   text-align: center;
 }
-.Mintbtn input{
+
+.Mintbtn input {
   background-color: #00ca4e;
   color: #00ca4e;
   z-index: 1000000;
   border: 1rem solid black;
 }
+
 @media only screen and (max-width: 600px) {
   body {
     overflow: hidden;
   }
-  .app{
+
+  .app {
     justify-content: center;
-  align-items: center;
+    align-items: center;
   }
+
   .home {
     max-width: 100vw;
     flex-wrap: wrap-reverse;
@@ -912,9 +935,11 @@ td {
     height: 25vh;
     /* z-index: -1; */
   }
-  .home .left{
+
+  .home .left {
     z-index: 1;
   }
+
   .mx .navbar {
     max-width: 100vw;
     background: black;
@@ -956,7 +981,8 @@ td {
   .about .boxr {
     display: none;
   }
-  .sidebar{
+
+  .sidebar {
     display: none;
   }
 }

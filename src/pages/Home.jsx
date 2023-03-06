@@ -1,6 +1,7 @@
 import React from 'react'
 // import blockchain from "../assets/Blockchain.json"
-import blockchain from "../assets/65395-blockchain-animation-2.json"
+// import blockchain from "../assets/65395-blockchain-animation-2.json"
+import blockchain from "../assets/104714-core-3d.json"
 import Lottie from "lottie-react"
 import Button from '../components/Button'
 import { toast } from 'react-toastify'
