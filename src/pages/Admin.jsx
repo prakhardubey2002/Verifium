@@ -232,7 +232,7 @@ const Admin = () => {
                         <>
                         {
                             loadem && <>
-                                <h2>Feedback data Data  </h2>
+                                <h2>Feedback Data  </h2>
                                 <br />
                                 <table>
                                     <tr>

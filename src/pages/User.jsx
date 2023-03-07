@@ -5,6 +5,7 @@ import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import male from '../assets/male.png'
 import nftcard from "../assets/mincard.json"
 import nftlist from "../assets/nftlist.json"
+import certdata from "../assets/certdata.json"
 import data from "../assets/data.json"
 import Lottie from "lottie-react"
 const User = () => {
@@ -54,6 +55,15 @@ const User = () => {
                         <div class="category"> MinT Credentials NFT </div>
                         <div class="heading"> Mint  credentails in NFT format
                             <div class="author"> <span class="name">Category : </span> NFT</div>
+                        </div>
+                    </div>
+                </Link>
+                <Link to={`/MintNft/${isAddress}`}>
+                    <div class="card">
+                        <div class="card-image"><Lottie animationData={certdata} loop={true} /></div>
+                        <div class="category"> Credentails's Data and NFT Metadata </div>
+                        <div class="heading"> Add credentails Data before minting
+                            <div class="author"> <span class="name">Category : </span> Data</div>
                         </div>
                     </div>
                 </Link>
