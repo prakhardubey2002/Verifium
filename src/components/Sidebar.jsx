@@ -28,14 +28,14 @@ const Sidebar = () => {
                         <p>Admin</p>
                     </Link>
                     </li>
-                    <li><Link to="/feedback">
+                    <li><Link to={`nftlist/${isAddress}`}>
                         <Lottie className='articon' animationData={feedback} loop={1} pause={true} />
-                        <p>Feedback</p>
+                        <p>List NFT</p>
                     </Link>
                     </li>
                     <li><Link to={`MintNft/${isAddress}`}>
                         <Lottie className='articon' animationData={Layer} autoplay={false} loop={true} pause={true} />
-                        <p>List NFT</p>
+                        <p>Mint Credentials</p>
                     </Link>
                     </li>
                     

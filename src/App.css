@@ -277,6 +277,81 @@ html {
   height: 100%;
   border-radius: 1px solid plum;
 }
+.user .funKcard a{
+  text-decoration: none;
+}
+.user .funKcard .card {
+  max-width: 190px;
+  max-height: 474px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  margin: 1rem;
+}
+
+.user  .funKcard .card-image {
+  /* background-color: rgb(236, 236, 236); */
+  /* width: 80%;
+  height: 60%; */
+  max-height: 50%;
+  /* object-fit: cover; */
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+.user  .funKcard{
+  display: flex;
+}
+.user  .funKcard .card-image img {
+  position: absolute;
+  background-color: rgb(236, 236, 236);
+  /* width: 10%;
+  height: 10%; */
+  max-width: 100%;
+    height: auto; /* Optional: preserves aspect ratio of image */
+  /* object-fit: contain; */
+  border-radius: 6px 6px 0 0;
+}
+
+.funKcard .card-image:hover {
+  transform: scale(0.98);
+}
+
+.funKcard .category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.funKcard .category:hover {
+  cursor: pointer;
+}
+
+.funKcard .heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.funKcard .heading:hover {
+  cursor: pointer;
+}
+
+.funKcard .author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.funKcard .name {
+  font-weight: 600;
+}
+
+.funKcard .name:hover {
+  cursor: pointer;
+}
 
 .login-box .profpic {
   top: 2%;
@@ -754,7 +829,7 @@ html {
 
 .user {
   width: 80vw;
-  min-height: 80vh;
+  min-height: 100vh;
   border-radius: 1rem;
   background: rgba(24, 20, 20, 0.987);
   box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
@@ -764,6 +839,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
+  
 }
 
 .user button a {
@@ -912,6 +989,52 @@ td {
   color: #00ca4e;
   z-index: 1000000;
   border: 1rem solid black;
+}
+
+.form-container {
+  /* background-color: #011522; */
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container input,
+select,
+textarea {
+  /* background-color: #011522; */
+  /* margin: 1rem; */
+  padding: 0.2rem;
+  border-radius: 1rem;
+  outline: none;
+  border: 0px;
+  min-width: 280px;
+}
+
+.form-container input,
+select,
+textarea {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  /* background-color: transparent; */
+  border-radius: 20px;
+  width: 100%;
+}
+
+.form-container label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
 }
 
 @media only screen and (max-width: 600px) {

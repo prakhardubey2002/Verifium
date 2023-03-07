@@ -42,14 +42,14 @@ const ListAll = () => {
             <div className="NfTcontainer">
                 <div className="grd-back">
                     <div className="text-center">
-                       <button onClick={goBack} >
+                       <button onClick={goBack} style={{marginBottom:"1rem",marginTop:"1rem"}} >
                         go Back
                        </button>
                         <button
                             className="button-24"
                             onClick={fetchNFTs}
                         >
-                            Show NFts and Minted Certificates
+                            Click to Show NFts
                         </button>
                     </div>
                     <div className="row">
