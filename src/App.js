@@ -16,6 +16,7 @@ import NFTList from './components/NFTList'
 // import MintNft from './pages/MintNft'
 import User from './pages/User';
 import Create from './pages/MintNft';
+import NftData from './pages/NftData';
 // import { ThirdwebSDKProvider } from "@thirdweb-dev/react/solana";
 // import { useWallet } from "@solana/wallet-adapter-react";
 function App() {
@@ -46,6 +47,7 @@ function App() {
             <Route path='/adx' element={<Adx />} />
             <Route path='/MintNft/:id' element={<Create/>}/>
             <Route path='/NFTList/:id' element={<NFTList/>}/>
+            <Route path='/NFTData/:id' element={<NftData/>}/>
           </Routes>
 
         </BrowserRouter>

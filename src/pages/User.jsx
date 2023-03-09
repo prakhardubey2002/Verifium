@@ -58,7 +58,7 @@ const User = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to={`/MintNft/${isAddress}`}>
+                <Link to={`/NFTData/${isAddress}`}>
                     <div class="card">
                         <div class="card-image"><Lottie animationData={certdata} loop={true} /></div>
                         <div class="category"> Credentails's Data and NFT Metadata </div>
