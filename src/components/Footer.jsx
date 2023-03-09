@@ -40,7 +40,10 @@ const Footer = () => {
           <ul>
             {/* <li>Facebook</li>
             <li>Instagram</li> */}
+            {/* <Link to=""></Link> */}
+            <a target="_blank" href="https://www.linkedin.com/in/prakhar-dubey-3790b81b7/">
             <li>Linkdln <LinkedInIcon /></li>
+            </a>
             <li>Github <GitHubIcon /></li>
           </ul>
         </div>

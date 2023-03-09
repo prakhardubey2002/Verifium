@@ -492,7 +492,10 @@ html {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
+}
+.footer a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .Details {
@@ -884,9 +887,10 @@ table {
   width: 80%;
   min-height: 100px;
   /* background-color: #000000; */
+  /* border: 1px solid black; */
 
 }
-
+/* tr:nth-child(even){background-color: #4c4a4a;} */
 th {
   border: 1px solid rgb(255, 255, 255);
   padding: 1rem;
@@ -897,7 +901,7 @@ td {
   text-align: center;
   padding: 1rem;
 }
-
+tr:hover {background-color: rgb(31, 194, 215);}
 .Stats {
   width: 80vw;
   min-height: 100vh;

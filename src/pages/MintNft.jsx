@@ -40,6 +40,7 @@ const Create = () => {
 			setMinted(saveMinted);
 			setStatus(`success: Successfully Signed and Minted.  and ${saveMinted} my: ${adres} `);
 			toast(`success: Successfully Signed and Minted.  and ${saveMinted} my: ${adres} `);
+			window.location.replace(`https://explorer.solana.com/address/${isAddress}/tokens?cluster=devnet`);
 		}
 	  }
 
