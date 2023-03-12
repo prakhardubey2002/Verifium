@@ -18,7 +18,7 @@ const Admin = () => {
     const { isAddress, setIsAddress } = useGlobalContext();
     useEffect(() => {
         console.log("z")
-        fetch('http://localhost:3000/ali/UserDataView', {
+        fetch('https://verifium-backend.vercel.app/ali/UserDataView', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const Admin = () => {
                 setLoad(true);
             })
 
-        fetch('http://localhost:3000/ali', {
+        fetch('https://verifium-backend.vercel.app/ali', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const Admin = () => {
             )
 
 
-            fetch('http://localhost:3000/ali/feedbacklist',{
+            fetch('https://verifium-backend.vercel.app/ali/feedbacklist',{
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json'
