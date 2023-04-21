@@ -46,6 +46,7 @@ const Create = () => {
 
 	const mintNow = (e) => {
 		toast("Wait while we make transaction")
+		toast("Once credentiual minting is done you will redirected solana explorer page of your mint")
 		e.preventDefault();
 		setStatus("Loading");
 		let formData = new FormData();

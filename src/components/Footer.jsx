@@ -44,7 +44,9 @@ const Footer = () => {
             <a target="_blank" href="https://www.linkedin.com/in/prakhar-dubey-3790b81b7/">
             <li>Linkdln <LinkedInIcon /></li>
             </a>
+            <a target="_blank"  href="https://github.com/prakhardubey2002">
             <li>Github <GitHubIcon /></li>
+            </a>
           </ul>
         </div>
         <div className="newseletter">

@@ -288,6 +288,20 @@ html {
   padding: .4em;
   border-radius: 6px;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user .funKcard .card .userbutton{
+  max-width: fit-content;
+  font-size: .8rem;
+  padding: 10px 12px;
+  color: #fff;
+  background-color: black;
+  border-radius: 2rem;
+  margin: 0.4rem 0;
+  box-shadow: 2px 2px 7px 1px rgba(0,0,0,1);
 }
 
 .user  .funKcard .card-image {
@@ -500,7 +514,7 @@ html {
 }
 
 .Details {
-  min-height: 100vh;
+  min-height: 120vh;
   height: auto;
   width: 100vw;
   display: flex;
@@ -833,7 +847,7 @@ html {
 
 .user {
   width: 80vw;
-  min-height: 100vh;
+  min-height: 120vh;
   border-radius: 1rem;
   background: rgba(24, 20, 20, 0.987);
   box-shadow: 0 15px 25px rgb(0 0 0 / 60%);

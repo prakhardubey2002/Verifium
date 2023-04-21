@@ -34,6 +34,7 @@ const User = () => {
                         <div class="category"> New User?Add Data </div>
                         <div class="heading"> New User Must Register before using portal
                             <div class="author"> <span class="name">Category : </span> Data</div>
+                            <button className='userbutton' >Register</button>
                         </div>
                     </div>
                 </Link>
@@ -46,6 +47,7 @@ const User = () => {
                         <div class="category"> See wallet NFTs </div>
                         <div class="heading">See all your minted credentails and NFTs
                             <div class="author"> <span class="name">Category : </span> NFT</div>
+                            <button className='userbutton' >Details</button>
                         </div>
                     </div>
                 </Link>
@@ -55,6 +57,7 @@ const User = () => {
                         <div class="category"> MinT Credentials NFT </div>
                         <div class="heading"> Mint  credentails in NFT format
                             <div class="author"> <span class="name">Category : </span> NFT</div>
+                            <button className='userbutton' >Register</button>
                         </div>
                     </div>
                 </Link>
@@ -64,6 +67,7 @@ const User = () => {
                         <div class="category"> Credentails's Data and NFT Metadata </div>
                         <div class="heading"> Add credentails Data before minting
                             <div class="author"> <span class="name">Category : </span> Data</div>
+                            <button className='userbutton' >Add Data</button>
                         </div>
                     </div>
                 </Link>
