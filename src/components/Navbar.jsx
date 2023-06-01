@@ -85,8 +85,17 @@ const Navbar = () => {
                 <Link to="/About">About us</Link>
                 <Link to="/Guide">Guide</Link>
                 <Link to="/Admin">Admin</Link> */}
+                { isAddress === "user" ? <div className="box" onClick={toggleVisibility} >
+                        <PhantomButton borderRadius="2rem" backgroundColor="#fff" color="black" setPublicKey={setIsAddress} />
+                    </div>
+                    :
+                    <div className="key-box" onClick={tos}  >
 
-                {isVisible ?
+                        {isAddress.substring(0, 8)}...
+                    </div>}
+
+                
+                {/* {isVisible ?
                     <div className="box" onClick={toggleVisibility} >
                         <PhantomButton borderRadius="2rem" backgroundColor="#fff" color="black" setPublicKey={setIsAddress} />
                     </div>
@@ -95,7 +104,7 @@ const Navbar = () => {
 
                         {isAddress.substring(0, 8)}...
                     </div>
-                }
+                } */}
             </div>
 
         </div>

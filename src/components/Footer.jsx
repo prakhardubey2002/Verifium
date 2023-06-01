@@ -21,7 +21,7 @@ const Footer = () => {
       body: JSON.stringify(formData)
     };
 
-    const response = await fetch('http://localhost:3000/ali/createfeedback', options);
+    const response = await fetch('https://verifium-backend.vercel.app/ali/createfeedback', options);
     const data = await response.json();
     toast(`Feedback added Succesfully `);
     console.log(data);
@@ -44,7 +44,7 @@ const Footer = () => {
             <a target="_blank" href="https://www.linkedin.com/in/prakhar-dubey-3790b81b7/">
             <li>Linkdln <LinkedInIcon /></li>
             </a>
-            <a target="_blank"  href="https://github.com/prakhardubey2002">
+            <a target="_blank"  href="https://github.com/prakhardubey2002" rel="noreferrer">
             <li>Github <GitHubIcon /></li>
             </a>
           </ul>
